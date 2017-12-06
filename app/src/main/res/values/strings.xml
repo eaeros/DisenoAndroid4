@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplicando metodos</string>
+    <string name="button">Boton</string>
+    <string name="checkbox">este es un check box</string>
+    <string name="text_box">caja de texto</string>
+    <string name="edit_box">escribe aqui</string>
+    <string name="switch_button">Este es el fucking switch</string>
+</resources>
