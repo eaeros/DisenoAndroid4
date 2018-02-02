@@ -14,4 +14,28 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="143dp"
         android:text="caja de texto" />
+
+    <Button
+        android:id="@+id/btnFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="open fragmente window"
+        android:layout_below="@+id/textViewMain"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="30dp" />
+
+    <fragment
+        android:name="com.eaerostwitter.disenoandroid4.BlankFragment3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/btnFragment"
+        android:layout_alignLeft="@+id/btnFragment"
+        android:layout_alignStart="@+id/btnFragment"
+        android:layout_marginTop="39dp"
+        android:id="@+id/fragment1"
+        tools:layout="@layout/fragment_blank_fragment3" />
+
 </RelativeLayout>

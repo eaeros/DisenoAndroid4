@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.eaerostwitter.disenoandroid4.basicActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_basic"
+        android:id="@+id/include"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/imageBtnPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_call"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_alignBottom="@+id/editTextPhone"
+        android:layout_alignLeft="@+id/imageBtnWeb"
+        android:layout_alignStart="@+id/imageBtnWeb" />
+
+    <EditText
+        android:id="@+id/editTextWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_alignLeft="@+id/editTextPhone"
+        android:layout_alignStart="@+id/editTextPhone"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp" />
+
+    <ImageButton
+        android:id="@+id/imageBtnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_view"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignBottom="@+id/editTextWeb"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginEnd="65dp" />
+
+    <ImageButton
+        android:id="@+id/imageBtnCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_menu_camera"
+        android:layout_alignParentBottom="true"
+        android:background="#FF5722"/>
+
+    <SeekBar
+        android:id="@+id/seekBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="134dp"
+        android:layout_marginRight="134dp"
+        android:layout_toLeftOf="@+id/imageBtnWeb"
+        android:layout_toStartOf="@+id/imageBtnWeb" />
+
+</RelativeLayout>
