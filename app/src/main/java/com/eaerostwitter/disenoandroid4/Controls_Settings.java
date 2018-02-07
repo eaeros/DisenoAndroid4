@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
+
 
 public class Controls_Settings extends AppCompatActivity {
     private EditText varTxtPix;
@@ -36,10 +36,16 @@ public class Controls_Settings extends AppCompatActivity {
         varBtnPix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String pixNumber = varTxtPix.getText().toString();
+                //String pixNumber = varTxtPix.getText().toString();
+                    String pixNumber =varTxtPix.getText().toString();
                 if (pixNumber != null && !pixNumber.isEmpty()) {
                     //pix =Integer.getInteger(pixNumber);
                     Toast.makeText(Controls_Settings.this,"valor enviado: "+pixNumber, Toast.LENGTH_SHORT).show();
+                    //dejamos de usar el bundle y utilizamos la variable global para mantener cambios
+                    int global = Integer.parseInt(pixNumber);
+                    Globals g = Globals.getInstance();
+                    g.setData(global);
+                    //Toast.makeText(camera.this,"caja ahora vale"+String.valueOf(caja), Toast.LENGTH_SHORT).show();
                     Intent intend  = new Intent(Controls_Settings.this, Drawer.class);
                     //mandamos in inend con el id greeter y la variable GREETER
                     intend.putExtra("finalNumid", pixNumber);

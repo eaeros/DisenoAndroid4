@@ -34,6 +34,9 @@ public class Drawer extends AppCompatActivity
                         .setAction("Action", null).show();
             }
         });
+        Globals g = Globals.getInstance();
+        int test =g.getData();
+        Toast.makeText(Drawer.this,"valor recibido desde Global class "+String.valueOf(test), Toast.LENGTH_SHORT).show();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -44,6 +47,8 @@ public class Drawer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
+
         //en este bundle se reciben datos desde el activity main
 
         Bundle bundle =getIntent().getExtras();
@@ -51,12 +56,14 @@ public class Drawer extends AppCompatActivity
             //int greeter = bundle.getInt("idpix");
             String greeter2 = bundle.getString("finalNumid");
             //Toast.makeText(Drawer.this,"pix vale"+String.valueOf(greeter), Toast.LENGTH_SHORT).show();
-            Toast.makeText(Drawer.this,(greeter2), Toast.LENGTH_SHORT).show();
+            Toast.makeText(Drawer.this,"valor recibido bundle"+(greeter2), Toast.LENGTH_SHORT).show();
+
+
             //txt.setText(greeter);
             //pix2 = greeter;
             //Toast.makeText(Drawer.this,"pix2 vale"+String.valueOf(pix2), Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(Drawer.this,"Esta vacio", Toast.LENGTH_LONG).show();
+            Toast.makeText(Drawer.this,"Esta vacio el bundle", Toast.LENGTH_LONG).show();
         }
     }
 
