@@ -44,15 +44,17 @@ public class Drawer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        //en este bundle se reciben datos desde el activity main
+
         Bundle bundle =getIntent().getExtras();
         if (bundle != null){
-            int greeter = bundle.getInt("idpix");
+            //int greeter = bundle.getInt("idpix");
             String greeter2 = bundle.getString("finalNumid");
-            Toast.makeText(Drawer.this,"pix vale"+String.valueOf(greeter), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(Drawer.this,"pix vale"+String.valueOf(greeter), Toast.LENGTH_SHORT).show();
             Toast.makeText(Drawer.this,(greeter2), Toast.LENGTH_SHORT).show();
             //txt.setText(greeter);
-            pix2 = greeter;
-            Toast.makeText(Drawer.this,"pix2 vale"+String.valueOf(pix2), Toast.LENGTH_SHORT).show();
+            //pix2 = greeter;
+            //Toast.makeText(Drawer.this,"pix2 vale"+String.valueOf(pix2), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(Drawer.this,"Esta vacio", Toast.LENGTH_LONG).show();
         }
@@ -102,16 +104,20 @@ public class Drawer extends AppCompatActivity
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_menu_Principal) {
+            Intent intent = new Intent(Drawer.this, MainActivity.class);
+            //intent.putExtra("idpix2",pix2);
+            startActivity(intent);
 
         } else if (id == R.id.nav_manage) {
             Intent intent = new Intent(this, Controls_Settings.class);
-            intent.putExtra("idpix2",pix2);
+            //intent.putExtra("idpix2",pix2);
             startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
+
 
         }
 

@@ -22,7 +22,7 @@ public class Controls_Settings extends AppCompatActivity {
         varTxtPix = (EditText) findViewById(R.id.editTxtPix);
         varBtnPix = (Button) findViewById(R.id.btnPix);
 
-        //inicia codigo de bundle
+        /*inicia codigo de bundle
         Bundle bundle =getIntent().getExtras();
         if (bundle != null){
             int greeter = bundle.getInt("idpix2");
@@ -32,14 +32,14 @@ public class Controls_Settings extends AppCompatActivity {
         } else {
             Toast.makeText(Controls_Settings.this,"Esta vacio", Toast.LENGTH_SHORT).show();
         }
-        //termina codigo de bundle
+        //termina codigo de bundle*/
         varBtnPix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String pixNumber = varTxtPix.getText().toString();
                 if (pixNumber != null && !pixNumber.isEmpty()) {
                     //pix =Integer.getInteger(pixNumber);
-                    Toast.makeText(Controls_Settings.this,"caja de texto vale: "+pixNumber, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Controls_Settings.this,"valor enviado: "+pixNumber, Toast.LENGTH_SHORT).show();
                     Intent intend  = new Intent(Controls_Settings.this, Drawer.class);
                     //mandamos in inend con el id greeter y la variable GREETER
                     intend.putExtra("finalNumid", pixNumber);

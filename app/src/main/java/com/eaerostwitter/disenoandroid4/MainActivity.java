@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intend = new Intent(MainActivity.this, Drawer.class);
-                intend.putExtra("idpix",pix);
+                //intend.putExtra("idpix",pix);
                 startActivity(intend);
             }
         });
