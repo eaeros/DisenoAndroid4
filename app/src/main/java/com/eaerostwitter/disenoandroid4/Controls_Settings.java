@@ -21,6 +21,7 @@ public class Controls_Settings extends AppCompatActivity {
         setContentView(R.layout.activity_controls__settings);
         varTxtPix = (EditText) findViewById(R.id.editTxtPix);
         varBtnPix = (Button) findViewById(R.id.btnPix);
+        
 
         /*inicia codigo de bundle
         Bundle bundle =getIntent().getExtras();
